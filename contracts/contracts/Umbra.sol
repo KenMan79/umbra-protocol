@@ -81,7 +81,7 @@ contract Umbra is BaseRelayRecipient, IKnowForwarderAddress, Ownable {
     address payable _receiver,
     bytes32 _pkx, // ephemeral public key x coordinate
     bytes32 _ciphertext
-  ) public payable unusedAddr(_receiver) {
+  ) public payable {
     require(msg.value > toll, "Umbra: Must pay more than the toll");
 
     uint256 amount = msg.value.sub(toll);
@@ -93,7 +93,6 @@ contract Umbra is BaseRelayRecipient, IKnowForwarderAddress, Ownable {
       _ciphertext
     );
 
-    isUsedAddr[_receiver] = true;
     _receiver.transfer(amount);
   }
 
