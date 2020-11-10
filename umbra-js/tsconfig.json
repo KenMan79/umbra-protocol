@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.settings.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "types",
+    "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true
+  },
+  "exclude": ["test", "node_modules", "types"]
+}

@@ -1,12 +1,14 @@
 {
-  "name": "umbra-js",
+  "name": "@umbra/umbra-js",
   "version": "0.0.1",
   "description": "Send and receive stealth payments",
   "main": "index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "test": "mocha ./test/*.test.js --exit --timeout 0",
     "lint": "eslint --ext .js .",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "build:declarations": "tsc -b ."
   },
   "author": "Matt Solomon <matt@mattsolomon.dev>, Ben DiFrancesco <ben@scopelift.co>",
   "license": "ISC",
